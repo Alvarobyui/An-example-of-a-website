@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+  <head minifest="/manifiesto/manifiesto.cache"> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+        <meta http-equv="refresh" content="5"/>
+        <title>my primera web </title>
+        <meta name="description"
+        content="weblog de Alvaro Diaz"/>
+        <meta name="keywords" content="weblog, blog, Alvaro Diaz,
+        multimedia"/>
+        <link rel=stylesheet href="css/estilo.css" type="text/css" />
+  </head>
+  <body>
+      <div id="cajaheader">
+      </div>
+      <div id="principal" itempscope itemtype="https://schema.org/Person">  
+            <header>
+                <div id="logo"></div>
+                <h1><span itemprop="name">Bienvenidos!</h1>
+                <h2><span itemprop="title">Contenido</h2>
+                <nav>
+                    <ul>
+                        <li><a href="index.html"><canvas id="iconoinicio" width="50" height="50"></canvas><br />Inicio</a></li>
+                        <li><a href="albun.html"><canvas id="iconofotos" width="50" height="50"></canvas><br />Fotos</a></li>
+                        <li><a href="sobreella.html"><canvas id="iconosobre" width="50" height="50"></canvas><br />Sobre</a></li>
+                        <li><a href="contacto.html"><canvas id="iconocontacto" width="50" height="50"></canvas><br />Contacto</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div id="contenido">
+                <section id="sobre">
+                    <span itemprop="image"><div id="mifoto"></div><!--<img src="photo/ZoryWarton1.jpg" width=170px height=150px />-->
+                <br/>Amigos, y todos los interesados. Bienvenidos! Este albun abarca 4 años de fotos y experiencias.
+                Espero que sea de su agrado.
+                <br/>Friends and interested people. Welcome! This albun page covers 4 years of photos and experiences.
+                I hope you like it.
+                <br/>Amigos, y todos los interesados. Bienvenidos! Este albun abarca 4 años de fotos y experiencias.
+                Espero que sea de su agrado.
+                <br/>Friends and interested people. Welcome! This albun page covers 4 years of photos and experiences.
+                I hope you like it.
+                
+                </section>
+                <aside>
+                <h5>Posts previus</h5>
+                    <ul>
+                        <li><a href=""><time>1998-11-28</time> / Feliz cumple</a></li>
+                        <li><a href=""><time>1998-11-28</time> / Feliz cumple</a></li>
+                        <li><a href=""><time>1998-11-28</time> / Feliz cumple</a></li>
+                        <li><a href=""><time>1998-11-28</time> / Feliz cumple</a></li>
+                    </ul>    
+                </aside>
+                <section>
+                        <article>
+                            <div id="logo1"></div>
+                            <time>2017-07-08</time>
+                            <h3>Titulo del post</h3>
+                            <h4>Subtitulo del post</h4>
+                            <p>Contenido de la web. contenido y contenido.</p>
+                            <video controls="controls" width="300px" height="200px" preload="preload">
+                                Tu navegador no soporta video. Haz Click aqui <a ref="">Aqui</a>
+                                <source src="video/15Segundos.mp4" type="video/mpeg">
+                                <source src="video/15Segundos.wmv" type="video/wmv">
+                                <source src="video/15Segundos.mkv" type="video/mkv">
+                            </video>
+                        </article>
+                        <article>
+                            <div id="logo2"></div>
+                            <time>2017-07-08</time>
+                            <h3>Titulo del post</h3>
+                            <h4>Subtitulo del post</h4>
+                            <p>Contenido de la web. contenido y contenido.</p>
+                            <audio src="audio/la_prim_nav_tan_hum_baj.mp3" controls="controls" preload="preload">
+                            Tu navegador no soporta audio. Haz Click aqui <a ref="">Aqui</a>
+                            </audio>
+                        </article>
+                        <article>
+                            <div id="logo3"></div>
+                            <time>2019-12-31</time>
+                            <h3>Titulo del post</h3>
+                            <h4>Subtitulo del post</h4>
+                            <p>Contenido de la web. contenido y contenido.</p>
+                        </article>
+                </section>
+            </div>
+            <footer>
+                <h6>
+                    <div class="vcard">
+                        <div> <span class="name">&copy; Alvaro Diaz</span> <span class="author">
+                        writer</span></div>
+                    </div>
+                </h6>
+                <script type="text/javascript">                
+                    if (localStorage.pagecount)
+                    {localStorage.pagecount = Number(localStorage.pagecount) +1; }
+                    else {localStorage.pagecount = 1;}
+                    document.write("Has visitado mi web "+localStorage.pagecount+" veces.")
+                </script>
+                <script type="text/javascript">                
+                    if (sessionStorage.pagecount)
+                    {sessionStorage.pagecount = Number(sessionStorage.pagecount) +1; }
+                    else {sessionStorage.pagecount = 1;}
+                    document.write("En esta sesión has visitado mi pagina "+sessionStorage.pagecount+" veces.")
+                </script>
+            </footer>
+      </div>
+  </body>
+</html>
+<script type="text/javascript">
+    var miColor="Blue";
+    var suColor="Grey"
+    var miSegundoColor="White" 
+    var escala= 0.5;
+
+    // Icono sobre ella
+    var c=document.getElementById("iconosobre");
+    var cxt=c.getContext("2d");
+
+    cxt.fillStyle=(miColor);
+    cxt.beginPath();
+    cxt.arc(escala*50,escala*25,escala*20,0,Math.PI*2,true);
+    cxt.closePath;
+    cxt.fill();
+
+    cxt.fillStyle=(miColor);
+    cxt.beginPath();
+    cxt.arc(escala*50,escala*90,escala*40,Math.PI,Math.PI*2,false);
+    cxt.closePath;
+    cxt.fill();
+
+    // icono contacto
+    var c=document.getElementById("iconocontacto");
+    var cxt=c.getContext("2d");
+
+    cxt.fillStyle=(suColor);
+    cxt.beginPath();
+    cxt.arc(escala*50-10,escala*25,escala*20,0,Math.PI*2,true);
+    cxt.closePath;
+    cxt.fill();
+
+    cxt.fillStyle=(suColor);
+    cxt.beginPath();
+    cxt.arc(escala*50-10,escala*90,escala*40,Math.PI,Math.PI*2,false);
+    cxt.closePath;
+    cxt.fill();
+
+    cxt.fillStyle=(miColor);
+    cxt.beginPath();
+    cxt.arc(escala*50+10,escala*25,escala*20,0,Math.PI*2,true);
+    cxt.closePath;
+    cxt.fill();
+
+    cxt.fillStyle=(miColor);
+    cxt.beginPath();
+    cxt.arc(escala*50+10,escala*90,escala*40,Math.PI,Math.PI*2,false);
+    cxt.closePath;
+    cxt.fill();
+
+    // icono inicio
+    var c=document.getElementById("iconoinicio");
+    var cxt=c.getContext("2d");
+
+    cxt.fillStyle=(miColor);
+    cxt.beginPath();
+    cxt.arc(escala*50,escala*50,escala*40,0,Math.PI*2,true);
+    cxt.closePath;
+    cxt.fill();
+
+    cxt.fillStyle=(miSegundoColor);
+    cxt.beginPath();
+    cxt.arc(escala*50,escala*50,escala*30,0,Math.PI*2,true);
+    cxt.closePath;
+    cxt.fill();
+
+    cxt.fillStyle=(miColor);
+    cxt.beginPath();
+    cxt.arc(escala*50,escala*50,escala*20,0,Math.PI*2,true);
+    cxt.closePath;
+    cxt.fill();
+
+    // Icono fotos
+    var c=document.getElementById("iconofotos");
+    var cxt=c.getContext("2d");
+
+    cxt.fillStyle=(miColor);
+    cxt.beginPath();
+    cxt.arc(escala*50,escala*50,escala*20,0,Math.PI*2,true);
+    cxt.closePath;
+    cxt.fill();
+
+    cxt.fillStyle=(miColor);
+    cxt.beginPath();
+    cxt.arc(escala*50,escala*50,escala*40,Math.PI,Math.PI*2,false);
+    cxt.closePath;
+    cxt.fill();
+</script>
